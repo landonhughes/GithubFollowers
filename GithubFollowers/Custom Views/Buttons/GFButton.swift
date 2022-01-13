@@ -11,9 +11,7 @@ class GFButton: UIButton {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //custom code
         configure()
-        print("the overridden init from gfbutton was called.")
     }
     
     //for storyboards

@@ -12,6 +12,8 @@
 		DA0A11492784F7470035F9B5 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A11482784F7470035F9B5 /* GFBodyLabel.swift */; };
 		DA0A114B2784F8350035F9B5 /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A114A2784F8350035F9B5 /* GFAlertVC.swift */; };
 		DA0A114D278500550035F9B5 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A114C278500550035F9B5 /* UIViewController+Ext.swift */; };
+		DA8AED962795E26E00469693 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AED952795E26E00469693 /* PersistenceManager.swift */; };
+		DA8AED982795F1F600469693 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AED972795F1F600469693 /* FavoriteCell.swift */; };
 		DA8CF28D2783B82C00406C21 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CF28C2783B82C00406C21 /* GFTextField.swift */; };
 		DA9152B5278F581A002E2830 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9152B4278F581A002E2830 /* UserInfoVC.swift */; };
 		DA9152B7278F68F0002E2830 /* GFUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9152B6278F68F0002E2830 /* GFUserInfoHeaderVC.swift */; };
@@ -46,6 +48,8 @@
 		DA0A11482784F7470035F9B5 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		DA0A114A2784F8350035F9B5 /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 		DA0A114C278500550035F9B5 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		DA8AED952795E26E00469693 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		DA8AED972795F1F600469693 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		DA8CF28C2783B82C00406C21 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		DA9152B4278F581A002E2830 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		DA9152B6278F68F0002E2830 /* GFUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderVC.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				DABA0D81278CBF710052B61A /* FollowerCell.swift */,
+				DA8AED972795F1F600469693 /* FavoriteCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE331B42787848D00BF77F9 /* NetworkManager.swift */,
+				DA8AED952795E26E00469693 /* PersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -346,6 +352,7 @@
 				DA0A114B2784F8350035F9B5 /* GFAlertVC.swift in Sources */,
 				DA9152C3278F93B5002E2830 /* GFFollowerItemVC.swift in Sources */,
 				DA9152BD278F82A0002E2830 /* GFItemInfoView.swift in Sources */,
+				DA8AED982795F1F600469693 /* FavoriteCell.swift in Sources */,
 				DABA0D82278CBF710052B61A /* FollowerCell.swift in Sources */,
 				DAE331B827878E6B00BF77F9 /* GFError.swift in Sources */,
 				DA9152B7278F68F0002E2830 /* GFUserInfoHeaderVC.swift in Sources */,
@@ -353,6 +360,7 @@
 				DAE331B027877ABD00BF77F9 /* Follower.swift in Sources */,
 				DA0A11472784F3F60035F9B5 /* GFTitleLabel.swift in Sources */,
 				DA9152C6278F9678002E2830 /* Date+Ext.swift in Sources */,
+				DA8AED962795E26E00469693 /* PersistenceManager.swift in Sources */,
 				DA9152B9278F69DD002E2830 /* GFSecondaryTitleLabel.swift in Sources */,
 				DAB2D2B9278E2CB900A36B4D /* GFEmptyStateView.swift in Sources */,
 				DAE331B52787848D00BF77F9 /* NetworkManager.swift in Sources */,

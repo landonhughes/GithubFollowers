@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoritesListVC: UIViewController {
+class FavoritesListVC: GFDataLoadingVC {
 
     let tableView = UITableView()
     var favorites: [Follower] = []
@@ -47,7 +47,7 @@ class FavoritesListVC: UIViewController {
             switch result {
             case .success(let favorites):
                 if favorites.isEmpty {
-                    self.showEmptyStateView(with: "No Favorites?\nAdd one on the follower screeb.", in: self.view)
+                    self.showEmptyStateView(with: "No Favorites?\nAdd one on the follower screen.", in: self.view)
                 } else {
                     self.favorites = favorites
                     DispatchQueue.main.async {
@@ -78,9 +78,7 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let favorite = favorites[indexPath.row]
-        let destinationVC = FollowerListVC()
-        destinationVC.username = favorite.login
-        destinationVC.title = favorite.login
+        let destinationVC = FollowerListVC(username: favorite.login)
         //present -> modally , pushViewController -> pushes it
         navigationController?.pushViewController(destinationVC, animated: true)
     }

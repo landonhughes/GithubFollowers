@@ -77,46 +77,19 @@ class FollowerListVC: GFDataLoadingVC {
         isLoadingMoreFollowers = true
         
         Task {
-//            do {
-//                let followers = try await NetworkManager.shared.getFollowers(for: username, page: page)
-//                updateUI(with: followers)
-//                dismissLoadingView()
-//            }catch {
-//                // handle errors
-//                if let gfError = error as? GFError {
-//                    presentGFAlert(title: "Bad stuff happened", message: gfError.rawValue, buttonTitle: "Ok")
-//                } else {
-//                    presentDefaultError()
-//                }
-//                dismissLoadingView()
-//            }
-            //way #2 with a generic catch all error
-//            guard let followers = try? await NetworkManager.shared.getFollowers(for: username, page: page) else {
-//                presentDefaultError()
-//                dismissLoadingView()
-//                return
-//            }
-//            updateUI(with: followers)
-//            dismissLoadingView()
-            
+            do {
+                let followers = try await NetworkManager.shared.getFollowers(for: username, page: page)
+                updateUI(with: followers)
+                dismissLoadingView()
+            }catch {
+                if let gfError = error as? GFError {
+                    presentGFAlert(title: "Bad stuff happened", message: gfError.rawValue, buttonTitle: "Ok")
+                } else {
+                    presentDefaultError()
+                }
+                dismissLoadingView()
+            }
         }
-        
-//        NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
-//
-//            guard let self = self else { return }
-//            self.dismissLoadingView()
-//
-//            switch result {
-//
-//            case .success(let followers):
-//
-//
-//            case .failure(let error):
-//                self.
-//            }
-//            self.isLoadingMoreFollowers = false
-//
-//        }
     }
     
     func updateUI(with followers: [Follower]) {

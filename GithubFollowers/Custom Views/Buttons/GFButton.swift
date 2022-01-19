@@ -14,7 +14,6 @@ class GFButton: UIButton {
         configure()
     }
     
-    //for storyboards
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented.")
     }
@@ -28,10 +27,11 @@ class GFButton: UIButton {
     
     private func configure() {
         layer.cornerRadius = 10
-        setTitleColor(.white, for: .normal)
         //for dynamic type
         titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+        setTitleColor(.white, for: .normal)
         translatesAutoresizingMaskIntoConstraints = false
+        
     }
     
     func set(backgroundColor: UIColor, title: String) {

@@ -21,7 +21,6 @@ class GFItemInfoVC: UIViewController {
     
     var user: User!
     
-    
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
         self.user = user
@@ -37,14 +36,12 @@ class GFItemInfoVC: UIViewController {
         configureActionButton()
         layoutUI()
         configureStackView()
-        // Do any additional setup after loading the view.
     }
 
     func configureBackgroundView() {
         view.layer.cornerRadius = 18
         view.backgroundColor = .secondarySystemBackground
     }
-    
     
     private func configureStackView() {
         stackView.axis = .horizontal

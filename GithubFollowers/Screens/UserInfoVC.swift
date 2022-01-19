@@ -25,7 +25,7 @@ class UserInfoVC: GFDataLoadingVC {
     var itemViews: [UIView] = []
     
     var username: String!
-    //change to follower listvc
+    
     weak var delegate: UserInfoVCDelegate!
     
     override func viewDidLoad() {
@@ -34,7 +34,6 @@ class UserInfoVC: GFDataLoadingVC {
         configureViewController()
         layoutUI()
         getUserInfo()
-        
     }
     
     func configureViewController() {
@@ -61,9 +60,7 @@ class UserInfoVC: GFDataLoadingVC {
             
             switch result {
             case .success(let user):
-                DispatchQueue.main.async {
-                    self.configureUIElements(with: user)
-                }
+                DispatchQueue.main.async { self.configureUIElements(with: user) }
                 
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")

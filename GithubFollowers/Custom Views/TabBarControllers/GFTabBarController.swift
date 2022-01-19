@@ -20,15 +20,14 @@ class GFTabBarController: UITabBarController {
         UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
         
         self.viewControllers = [createSearchNC(), createFavoritesNC()]
-        // Do any additional setup after loading the view.
     }
+    
     func createSearchNC() -> UINavigationController {
         let searchVC = SearchVC()
         searchVC.title = "Search"
         searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         
         return UINavigationController(rootViewController: searchVC)
-    
     }
     
     func createFavoritesNC() -> UINavigationController {
@@ -38,6 +37,4 @@ class GFTabBarController: UITabBarController {
         
         return UINavigationController(rootViewController: favoritesListVC)
     }
-    
-
 }

@@ -35,11 +35,11 @@ class GFAlertVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black.withAlphaComponent(0.75)
         view.addSubviews(containerView, titleLabel, actionButton, messageLabel)
+        
         configureContainerView()
         configureTitleLabel()
         configureActionButton()
         configureMessageLabel()
-        // Do any additional setup after loading the view.
     }
     
     func configureContainerView() {
@@ -59,9 +59,7 @@ class GFAlertVC: UIViewController {
             titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
             titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
             titleLabel.heightAnchor.constraint(equalToConstant: 28)
-            
         ])
-        
     }
     
     func configureActionButton() {

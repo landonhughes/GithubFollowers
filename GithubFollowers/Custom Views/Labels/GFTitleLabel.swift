@@ -13,9 +13,7 @@ class GFTitleLabel: UILabel {
         super.init(frame: frame)
         configure()
     }
-    
-    
-    
+
     required init?(coder: NSCoder) {
         fatalError("not implemented")
     }

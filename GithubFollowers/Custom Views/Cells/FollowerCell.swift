@@ -27,10 +27,7 @@ class FollowerCell: UICollectionViewCell {
         avatarImageView.downloadImage(fromURL: follower.avatarUrl)
         usernameLabel.text = follower.login
     }
-    override func prepareForReuse() {
-        usernameLabel.text = ""
-        avatarImageView.image = avatarImageView.placeholderImage
-    }
+    
     private func configure() {
         addSubviews(avatarImageView, usernameLabel)
         let padding: CGFloat = 9

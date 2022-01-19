@@ -90,6 +90,15 @@ class FollowerListVC: GFDataLoadingVC {
 //                }
 //                dismissLoadingView()
 //            }
+            //way #2 with a generic catch all error
+//            guard let followers = try? await NetworkManager.shared.getFollowers(for: username, page: page) else {
+//                presentDefaultError()
+//                dismissLoadingView()
+//                return
+//            }
+//            updateUI(with: followers)
+//            dismissLoadingView()
+            
         }
         
 //        NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
